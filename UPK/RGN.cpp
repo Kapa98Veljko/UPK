@@ -7,6 +7,7 @@ RGN::RGN() {
 	if (probability_ < 0 || probability_>1) {
 		probability_ = 0.5;
 	}
+	cout << "================================" << endl;
 }
 
 void RGN::get_seed(vector<int>& seed,int k)  {

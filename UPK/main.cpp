@@ -4,17 +4,13 @@
 int main() {
 
 	LSFR* lsfr16 = new LSFR();
-	vector<int> & coeff = lsfr16->get_coeff_();
-	int bits = lsfr16->get_bits();
-	int size = coeff.size();
-	for(int i = 0; i < size; i++) {
-		cout << coeff[i] << endl;
-
-
-	}
+	lsfr16->print_polynom();
 	RGN* rgn = new RGN();
-	rgn->get_seed(lsfr16->get_seed(),bits);
+	rgn->get_seed(lsfr16->get_seed(), lsfr16->get_bits());
 	lsfr16->print_seed();
+
+	lsfr16->secv20();
+	lsfr16->print_secv20();
 
 return 0;
 };
